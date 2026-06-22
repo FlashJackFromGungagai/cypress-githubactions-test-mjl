@@ -50,7 +50,7 @@
     "slugify": "^1.6.5",
     "tailwindcss": "^3.0.23",
     "tsconfig-paths": "^3.13.0",
-    "typescript": "^4.6.2",
+    "typescript": "^5.0.0",
     "unslugify": "^1.0.2",
     "url-loader": "^4.1.1"
   }
