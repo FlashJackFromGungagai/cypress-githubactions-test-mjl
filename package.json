@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "test": "jest",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -15,9 +16,11 @@
     "@tailwindcss/typography": "^0.5.2",
     "@types/glob": "^7.2.0",
     "@xstate/react": "^2.0.1",
+    "cypress": "^15.21.0",
     "dotenv": "^16.0.0",
     "glob": "^7.2.0",
     "globby": "^13.1.1",
+    "jest": "^30.4.2",
     "linkinator": "^3.0.3",
     "next": "^12.3.4",
     "react": "^17.0.2",
@@ -39,6 +42,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "gray-matter": "^4.0.3",
+    "jest-html-reporter": "^4.4.0",
     "markdown-toc-unlazy": "^1.0.1",
     "mocha": "^9.2.1",
     "next-mdx-remote": "^4.0.0",
@@ -53,5 +57,28 @@
     "typescript": "^5.0.0",
     "unslugify": "^1.0.2",
     "url-loader": "^4.1.1"
-  }
+  },
+  "allowScripts": {
+    "cypress@15.21.0": true,
+    "fsevents@2.3.3": true,
+    "unrs-resolver@1.12.2": true
+  },
+  "name": "cypress-realworld-testing-course-app",
+  "version": "1.0.0",
+  "description": "This application is for the [Testing your first application course](https://learn.cypress.io/testing-your-first-application) on [learn.cypress.io](https://learn.cypress.io/).",
+  "main": "next-sitemap.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cypress-io/cypress-realworld-testing-course-app.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cypress-io/cypress-realworld-testing-course-app/issues"
+  },
+  "homepage": "https://github.com/cypress-io/cypress-realworld-testing-course-app#readme"
 }

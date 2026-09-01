@@ -1,0 +1,8 @@
+//TC002-VerifyH1-HomePage-served-cy-ts
+//Verify that the page server will
+describe.only('H1 element on home page', () =>
+    {
+
+    }
+
+)// cllose 
