@@ -29,12 +29,12 @@ jobs:
         # lets define the steps of execution
         steps:
             - name: Cypress E2E Testing on Chrome
-            #I have used the name of this job as the same name as the workflow
-            uses: actions/checkout@v4
+              #I have used the name of this job as the same name as the workflow
+              uses: actions/checkout@v4
 
             - name: Execute Cypress
-             uses: cypress-io/github-actions@v6
-             with:
-                # We will read the browers dynamically from your manual UI selection
-                browser: ${{inputs.browser}}
+              uses: cypress-io/github-actions@v6
+              with:
+                 # We will read the browers dynamically from your manual UI selection
+                 browser: ${{inputs.browser}}
 
