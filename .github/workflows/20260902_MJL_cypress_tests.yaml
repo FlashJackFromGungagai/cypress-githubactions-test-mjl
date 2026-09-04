@@ -1,3 +1,40 @@
 # this is my YML file to execute the cypress tests
 # Written by Mike Little
 # Wednesday 2 September 2026
+name: Cypress E2E Testing on Chrome
+
+# Create a job to execute my cypress test cases.
+# Here we configured to initiate via a button in github.com
+on:
+    workflow_dispatch:
+        inputs:
+            browser:
+                description: "Select the browser to run these cypress tests"
+                required: true
+                default: 'chrome'
+                type: choice
+                options:
+                    - chrome
+                    - firefox 
+                    - safari
+
+# we will define the details of the job to run
+# this will be executed manually through the github.com
+# user interface.
+# there is only one job at this stage.
+
+jobs:
+    cypress-run:
+        runs-on: ubuntu-latest
+        # lets define the steps of execution
+        steps:
+            -name: Cypress E2E Testing on Chrome
+            #I have used the name of this job as the same name as the workflow
+            uses: actions/checkout@v4
+
+            -name: Execute Cypress
+             uses: cypress-io/guthub-actions@v6
+             with:
+                # We will read the browers dynamically from your manual UI selection
+                browser: ${{inputs.browser}}
+
